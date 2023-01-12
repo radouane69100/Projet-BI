@@ -1,5 +1,5 @@
 FROM python:3.7.2-slim
-LABEL maintainer="Byron Linares"
+LABEL maintainer="B.a."
 
 EXPOSE 8501
 
