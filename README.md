@@ -3,8 +3,16 @@ Streamlit Project docs: https://streamlit.io/docs/
 
 <p align="center">
   <img src="img/dashboard.png" width="750" title="Example dashboard App">
-</p>
-
+</p>   
+<p align="center">  
+   <img src="img/rawdata.png" width="750" title="Example rawdata App">  
+ </p>  
+ <p align="center">   
+   <img src="img/worldmap.png" width="750" title="Example worldmap App">  
+  </p>    
+ <p align="center">     
+   <img src="img/zoommap.png" width="750" title="Example zoommap App">  
+   
 Get the project 
 ## Clone
 ```sh
@@ -24,6 +32,26 @@ docker-compose up
 * Postgresql for Airflow
 * Mysql for datawarehouse 
 * Streamlit app for dashboard visualization
+
+## Containers:
+* Container 1:   
+  In this container hosts Streamlit to the visualization of the Dashboards. in this container it is getting done the following tasks:  
+   •	Setting the title and the description of the dashboard  
+   •	Connection to MySQL server  
+   •	Reading the data of new cases, deaths and recoveries   
+   •	Inserting the new data in MySQL   
+   •	Creating the different parts of the dashboard:  
+       o	The sidebar  
+       o	The world maps  
+       o	The graph  
+       o	The bar graphs  
+   •	Passing the data to the different part of the dashboard  
+* Container 2:  
+  This container hosts the MySQL server Database that contains the Data of COVID cases, deaths and recoveries.  
+* Container 3:   
+  This container hosts the Postgres server of Airflow.   
+* Container 4:  
+  This container hosts Airflow and it should charge automatically the Data from the CSV files and load the in the MySQL server. It is not working because the container   starts and stops. This bug should be fixed in order to load Data in MySQL server automat automatically.  
 
 ## Airflow Configurations
 ##### .config/airflow.cfg
@@ -51,7 +79,7 @@ Exists 3 etl dags for ingest data
 
 #### Etl Description 
 <p align="center">
-  <img src="img/airflow.png" width="750" title="Example dashboard App">
+  
 </p>
    
 * Each dag performs the same process, it has a sensor file to load for Confirmed, dead, recovered respectively in the monitor folder.
