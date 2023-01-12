@@ -23,7 +23,7 @@ git clone https://github.com/radouane69100/Projet-BI.git
 # Running Projet-BI (ETL -Postgres - Airflow - Streamlit-MySql) complete project
 
 ```sh
-cd Streamlit-Covid
+cd Projet-BI
 docker-compose build
 docker-compose up
 ```
