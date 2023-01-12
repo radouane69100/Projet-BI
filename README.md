@@ -23,7 +23,7 @@ git clone https://github.com/radouane69100/Projet-BI.git
 # Running Projet-BI (ETL -Postgres - Airflow - Streamlit-MySql) complete project
 
 ```sh
-cd Projet-BI
+cd Streamlit-Covid
 docker-compose build
 docker-compose up
 ```
@@ -130,7 +130,7 @@ Exists 3 etl dags for ingest data
 ## Running Streamlit Covid19 docker built-in Stand-alone examples 
 ### Docker-compose
 ```sh
-cd Projet-BI
+cd Streamlit-covid
 docker-compose up 
 ```
 #### Go to 
